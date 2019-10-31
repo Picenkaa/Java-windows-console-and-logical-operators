@@ -21,7 +21,7 @@ public class JavaApplication21 {
     }
     public static int  XOR2(int a, int b) {
        
-     return(~(~a&~(a&b))&~(b&~(a&b)));
+     return(~(~(b&~(a&b))&~(a&~(a&b))));
     }
     public static int XOR3(int a, int b) {
        
@@ -35,7 +35,7 @@ public class JavaApplication21 {
     
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
-    // int a=10;
+     //int a=10;
     // int b=20;
     int a=Integer.parseInt(args[0]); 
     int b=Integer.parseInt(args[1]); 
@@ -47,11 +47,11 @@ public class JavaApplication21 {
      FileOutputStream fos = new FileOutputStream("atsakymas.csv");
      PrintWriter pw = new PrintWriter(fos);
      StringBuilder sb = new StringBuilder();
-   pw.println("Vardas Pavarde Grupe , Pradiniai duomenys , Naudotos logines sekos, Gauti rezultatai atlikus operacijas ");
-    pw.println("Karol Ravdo ISF18/2" + "," + a + " " + b + "," + " NOT AND OR " + "," +  x1 );
-    pw.println("Karol Ravdo ISF18/2" + "," + a + " " + b + "," + " NAND " + "," +  x2 );
-    pw.println("Karol Ravdo ISF18/2" + "," + a + " " + b + "," + " NOT AND OR " + "," +  x3 );
-    pw.println("Karol Ravdo ISF18/2" + "," + a + " " + b + "," + " NOT AND OR " + "," +  x4 );
+   pw.println("Vardas Pavarde Grupe ; Pradiniai duomenys ; Naudotos logines sekos ; Gauti rezultatai atlikus operacijas ");
+    pw.println("Karol Ravdo ISF18/2" + ";" + a + " " + b + ";" + " NOT AND OR " + ";" +  x1 );
+    pw.println("Karol Ravdo ISF18/2" + ";" + a + " " + b + ";" + " NAND " + ";" +  x2 );
+    pw.println("Karol Ravdo ISF18/2" + ";" + a + " " + b + ";" + " NOT AND OR " + ";" +  x3 );
+    pw.println("Karol Ravdo ISF18/2" + ";" + a + " " + b + ";" + " NOT AND OR " + ";" +  x4 );
 
      pw.close();
     System.out.println("file written do csv file");
